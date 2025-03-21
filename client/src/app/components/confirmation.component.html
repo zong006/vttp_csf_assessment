@@ -1,0 +1,34 @@
+<div class="row mt-3">
+  <div class="col">
+    <div class="fs-1 fw-bold text-primary">Order Placed</div>
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-secondary" (click)="backToView1()">Back</button>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-2">
+  <div class="col">
+    <p> Your order details are below</p>
+    <table class="table table-striped">
+      <tbody>
+        <tr>
+          <td>Date:</td>
+          <td> {{(details | async)?.timestamp | date: 'mediumDate'}} </td>
+        </tr>
+        <tr>
+          <td>Order Id:</td>
+          <td> {{(details | async)?.order_id}} </td>
+        </tr>
+        <tr>
+          <td>Payment Id:</td>
+          <td> {{(details | async)?.payment_id}} </td>
+        </tr>
+        <tr>
+          <td>Total:</td>
+          <td> {{(details | async )?.total | currency: 'USD'}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
