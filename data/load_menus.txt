@@ -1,4 +1,5 @@
 # TODO: Task 1.1
 
 
-mongoimport  -d restaurant -c menus --jsonArray  --file=data/menus.json 
+mongoimport --uri="<<get public url from railway mongodb>>" -d restaurant -c menus --jsonArray  --file=data/menus.json 
+
